@@ -1,0 +1,34 @@
+npm :- node package manager
+npx:- node package executer
+
+methords to install react:
+1. npx create-react-app filename
+To run the file we use :- npm run start <here startis to run the start script></here>
+
+2.
+npm create vite@latest my-app -- --template react
+   then after that move to the other folder 
+   in which all the package is install 
+   write npm install in the terminal
+      then to run the code :-
+       npm run dev
+
+       
+
+       https://github.com/acdlite/r
+
+       // 
+
+props makes the component reuseable 
+
+rfce : - is short cut to create :-import React from 'react'
+
+function card() {
+  return (
+    <div>card</div>
+  )
+}
+
+export default card // for this we have to install the extension called react snippets
+
+docs :- use callback  react
