@@ -23,13 +23,13 @@ function App() {
     setAmount(convertedAmount)
    }
    const convert = () =>{
-     setConvertedAmount (amount*currencyInfo)
+     setConvertedAmount (amount*currencyInfo[to])
     }
   return (
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
-                backgroundImage: `url(https://bing.com/th/id/OIP.xdbqBj0lQSytjXgRa9807wHaF7?w=212&h=180&c=7&r=0&o=7&cb=thvnextc2&pid=1.7&rm=3)`,
+                backgroundImage: `url(https://wallpapers.com/images/hd/finance-background-lmbrnieyixwr61g9.jpg)`,
             }}
         >
             <div className="w-full">
@@ -45,7 +45,7 @@ function App() {
                                 label="From"
                                 amount={amount}
                                 currencyOptions={option}
-                                onCurrencyChange={(currency) => setAmount(amount)}
+                                onCurrencyChange={(currency) => setFrom(currency)}
                                 selectCurrency={from}
                                 onAmountChange={(amount) => setAmount(amount)}
                             />  
@@ -65,13 +65,13 @@ function App() {
                                  amount={convertedAmount}
                                 currencyOptions={option}
                                 onCurrencyChange={(currency) => setTo(currency)}
-                                selectCurrency={from}
+                                selectCurrency={to}
                                 amountDisable
                                 
                             />
                         </div>
-                        <div className='bg-orange-600'>
-                          <button type="submit" className="w-full bg-orange-600 text-orange-700 px-4 py-3 rounded-lg">
+                        <div >
+                          <button type="submit" className="w-full bg-blue-700 text-white px-4 py-3 rounded-lg">
                             Convert{from.toUpperCase()} to {to.toUpperCase()} 
                         </button>
                         </div>
