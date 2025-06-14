@@ -12,7 +12,7 @@ function App() {
    
 
    const currencyInfo = useCurrencyInfo(from)
-
+    // console.log(currencyInfo)
 
    const option = Object.keys(currencyInfo) // will obtain all the currency data
   
@@ -23,8 +23,9 @@ function App() {
     setAmount(convertedAmount)
    }
    const convert = () =>{
-     setConvertedAmount (amount*currencyInfo)
+     setConvertedAmount (amount*currencyInfo[to])
     }
+// console.log(option)
   return (
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
@@ -45,10 +46,11 @@ function App() {
                                 label="From"
                                 amount={amount}
                                 currencyOptions={option}
-                                onCurrencyChange={(currency) => setAmount(amount)}
+                                onCurrencyChange={(currency) => setFrom(currency)}
                                 selectCurrency={from}
                                 onAmountChange={(amount) => setAmount(amount)}
-                            />  
+                            /> 
+                             
                         </div>
                         <div className="relative w-full h-0.5">
                             <button
@@ -62,10 +64,10 @@ function App() {
                         <div className="w-full mt-1 mb-4">
                             <InputBox
                                 label="To"
-                                 amount={convertedAmount}
+                                amount={convertedAmount}
                                 currencyOptions={option}
                                 onCurrencyChange={(currency) => setTo(currency)}
-                                selectCurrency={from}
+                                selectCurrency={to}
                                 amountDisable
                                 
                             />
