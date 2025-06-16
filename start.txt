@@ -27,8 +27,15 @@ function card() {
   return (
     <div>card</div>
   )
-}
+} 
 
 export default card // for this we have to install the extension called react snippets
 
 docs :- use callback  react
+
+
+a tag :- the page refresh and start it again 
+where as link tag there is no need to refresh the page 
+that's why in react we use link tag in place of a tag
+
+
