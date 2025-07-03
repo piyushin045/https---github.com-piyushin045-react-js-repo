@@ -38,4 +38,8 @@ a tag :- the page refresh and start it again
 where as link tag there is no need to refresh the page 
 that's why in react we use link tag in place of a tag
 
+React-redux: act as a wirring btw react and redux so that they can interact with each other
+
+
+ Redux-toollit :- In redux-toolkit never mutation of state happens automatically 
 
